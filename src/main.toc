@@ -1,0 +1,6 @@
+## Interface: 90200
+## Title: SFOShouts
+## Notes: Dynamic Raid Warnings macro for SFO
+## Author: Zoë
+## Version: 1.0.0
+
