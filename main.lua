@@ -5,7 +5,7 @@
 ---
 
 local skada, details;
-local currentBoss = "AnduinWrynn";
+local currentBoss = "None";
 local macros = {};
 local events = {};
 local commands = {};
