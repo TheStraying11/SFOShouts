@@ -37,18 +37,18 @@ function SFOShouts.wait(delay, func, ...)
 end
 
 function SFOShouts.getSkada()
-    skada = Skada.current.mobname;
+    SFOShouts.skada = Skada.current.mobname;
 end
 
 function SFOShouts.getDetails()
-    details = Details.GetCombat():GetCombatName();
+    SFOShouts.details = Details.GetCombat():GetCombatName();
 end
 
 function SFOShouts.changeMacro()
-    if details then
-        currentBoss = details
+    if SFOShouts.details then
+        SFOShouts.currentBoss = SFOShouts.details
     elseif skada then
-        currentBoss = skada
+        SFOShouts.currentBoss = SFOShouts.skada
     else
         print("[SFOShouts]: Details/Skada not present, /SFOShouts will not work")
     end
