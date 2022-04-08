@@ -4,3 +4,20 @@
 --- DateTime: 08/04/2022 00:37
 ---
 
+local events = {};
+local SFOShoutsFrame = CreateFrame("SFOShoutsFrame");
+
+function events:PLAYER_REGEN_DISABLED()
+
+end
+
+SFOShoutsFrame:SetScript(
+        "OnEvent",
+        function(self, event, ...)
+            events[event](self, ...);
+        end
+);
+
+for event, _ in pairs(events) do
+    SFOShoutsFrame:RegisterEvent(event);
+end
