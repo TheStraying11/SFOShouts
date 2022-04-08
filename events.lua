@@ -4,18 +4,22 @@
 --- DateTime: 08/04/2022 16:19
 ---
 
-local events
+local events = {};
 
 function events:ADDON_LOADED(AddonName)
     if AddonName == "SFOShouts" then
-        print("SFOShouts Loaded");
+        print("[SFOShouts]: SFOShouts Loaded");
     end
 end
 
 function events:PLAYER_REGEN_DISABLED()
-    SFOShouts.utils.wait(0.01, pcall, SFOShouts.Frame.utils.getDetails);
-    SFOShouts.utils.wait(0.01, pcall, SFOShouts.Frame.utils.getSkada);
-    SFOShouts.utils.wait(0.02, SFOShouts.utils.changeMacro);
+    C_Timer.after(0.01, function()
+        pcall(SFOShouts.Frame.utils.getDetails);
+    end);
+    C_Timer.after(0.01, function()
+        pcall(SFOShouts.Frame.utils.getSkada);
+    end);
+    C_Timer.after(0.02, SFOShouts.utils.changeMacro);
 end
 
 function events:PLAYER_REGEN_ENABLED()

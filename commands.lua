@@ -4,7 +4,7 @@
 --- DateTime: 08/04/2022 16:20
 ---
 
-local commands
+local commands = {};
 
 function commands.SFOShouts(args, _)
     if args == "" then args = "1" end

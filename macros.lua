@@ -4,14 +4,14 @@
 --- DateTime: 08/04/2022 16:21
 ---
 
-local macros
+local macros = {};
 
 function macros.None()
-    print("No Boss Engaged");
+    print("[SFOShouts]: No Boss Engaged");
 end
 
 function macros.VigilantGuardian()
-    print("No shout for vigilant guardian");
+    print("[SFOShouts]: No shout for vigilant guardian");
 end
 
 function macros.SkolextheInsatiableRavener()
@@ -23,7 +23,7 @@ function macros.ArtificerXyMox()
 end
 
 function macros.DausegnetheFallenOracle()
-    print("No shout for Dausegne");
+    print("[SFOShouts]: No shout for Dausegne");
 end
 
 function macros.PrototypePantheon()
