@@ -12,17 +12,11 @@ function events:ADDON_LOADED(AddonName)
     end
 end
 
-function events:PLAYER_REGEN_DISABLED()
-    C_Timer.after(0.01, function()
-        pcall(SFOShouts.Frame.utils.getDetails);
-    end);
-    C_Timer.after(0.01, function()
-        pcall(SFOShouts.Frame.utils.getSkada);
-    end);
-    C_Timer.after(0.02, SFOShouts.utils.changeMacro);
+function events:ENCOUNTER_START(encounterID, encounterName, difficultyID, groupSize)
+    SFOShouts.currentBoss = encounterName;
 end
 
-function events:PLAYER_REGEN_ENABLED()
+function events:ENCOUNTER_END(encounterID, encounterName, difficultyID, groupSize)
     SFOShouts.currentBoss = "None";
 end
 
