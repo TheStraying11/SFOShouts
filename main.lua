@@ -5,7 +5,7 @@
 ---
 
 _G.SFOShouts = {
-    currentBoss = "None";
+    currentBoss = "None",
     Frame = CreateFrame("Frame")
 }
 
