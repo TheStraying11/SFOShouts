@@ -7,7 +7,7 @@
 local macros = {};
 
 function macros.None()
-    print("[SFOShouts]: No Boss Engaged");
+    print("[SFOShouts]: No Supported Boss Engaged");
 end
 
 function macros.VigilantGuardian()

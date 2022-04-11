@@ -7,8 +7,10 @@
 local commands = {};
 
 function commands.SFOShouts(args, _)
+    local macro = SFOShouts.currentBoss:gsub("[ ',]", "");
+    if SFOShouts.macros[macro] == nil then macro = "None" end
     if args == "" then args = "1" end
-    SFOShouts.macros[SFOShouts.currentBoss:gsub("[ ',]", "")](args);
+    SFOShouts.macros[macro](args);
 end
 
 for command, func in pairs(commands) do
