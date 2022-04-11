@@ -6,37 +6,37 @@
 
 local macros = {};
 
-function macros.None()
+function macros.None(cmd)
     print("[SFOShouts]: No Supported Boss Engaged");
 end
 
-function macros.VigilantGuardian()
+function macros.VigilantGuardian(cmd)
     print("[SFOShouts]: No shout for vigilant guardian");
 end
 
-function macros.SkolextheInsatiableRavener()
+function macros.SkolextheInsatiableRavener(cmd)
     SendChatMessage("STACK FOR BURROW", "RAID_WARNING");
 end
 
-function macros.ArtificerXyMox()
+function macros.ArtificerXyMox(cmd)
     SendChatMessage("FOCUS ACOLYTE", "RAID_WARNING");
 end
 
-function macros.DausegnetheFallenOracle()
+function macros.DausegnetheFallenOracle(cmd)
     print("[SFOShouts]: No shout for Dausegne");
 end
 
-function macros.PrototypePantheon()
+function macros.PrototypePantheon(cmd)
     SendChatMessage("FOCUS: "..UnitName("target"):upper(), "RAID_WARNING");
     SetRaidTarget("target", 8);
 end
 
-function macros.LihuvimPrincipalArchitect()
+function macros.LihuvimPrincipalArchitect(cmd)
     SendChatMessage("FOCUS: "..UnitName("target"):upper(), "RAID_WARNING");
     SetRaidTarget("target", 8);
 end
 
-function macros.HalondrustheReclaimer()
+function macros.HalondrustheReclaimer(cmd)
     SendChatMessage("GET INFRONT OF ORB", "RAID_WARNING");
 end
 
@@ -48,6 +48,18 @@ function macros.AnduinWrynn(cmd)
     elseif cmd == "3" then
         SendChatMessage("STACK ON FALLEN KING", "RAID_WARNING")
     end
+end
+
+function macros.Rygelon(cmd)
+
+end
+
+function macros.LordsofDread(cmd)
+
+end
+
+function macros.TheJailer(cmd)
+
 end
 
 SFOShouts.macros = macros

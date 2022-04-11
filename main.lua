@@ -5,8 +5,6 @@
 ---
 
 _G.SFOShouts = {
-    skada = nil;
-    details = nil;
     currentBoss = "None";
     Frame = CreateFrame("Frame")
 }
